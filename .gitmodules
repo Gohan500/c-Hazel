@@ -1,0 +1,6 @@
+[submodule "GLFW"]
+	path = GLFW
+	url = https://github.com/TheCherno/GLFW
+[submodule "glfw-net"]
+	path = glfw-net
+	url = https://github.com/ForeverZer0/glfw-net
