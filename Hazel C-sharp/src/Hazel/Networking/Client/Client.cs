@@ -42,6 +42,7 @@ namespace Hazel.Networking.Client
                 Debug.LogError("Instance already exists you can't create a second one!");
                 return;
             }
+
             this.connectip = ConnectIp;
             this.port = port;
             dataBufferSize = DataBufferSize;

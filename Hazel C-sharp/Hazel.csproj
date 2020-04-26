@@ -99,6 +99,8 @@
     <Compile Include="src\Hazel\events\MouseEvent.cs" />
     <Compile Include="src\Hazel\Networking\Client\Client.cs" />
     <Compile Include="src\Hazel\Networking\Packet.cs" />
+    <Compile Include="src\Hazel\Networking\Server\Client.cs" />
+    <Compile Include="src\Hazel\Networking\Server\Server.cs" />
     <Compile Include="src\Hazel\Networking\ThreadManager.cs" />
     <Compile Include="src\Hazel\OperatingSystem\Windows\WindowsWindow.cs" />
     <Compile Include="src\Hazel\Window\Window.cs" />
@@ -112,5 +114,6 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
