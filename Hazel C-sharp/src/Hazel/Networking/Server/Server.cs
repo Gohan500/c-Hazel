@@ -25,8 +25,9 @@ namespace Hazel.Networking.Server
         private static UdpClient udpListener;
         public ThreadManager TM { get; private set; } = new ThreadManager();
 
-        public Server(int _maxPlayers, int _port, string ipaddress = "any")
+        public Server(int _maxPlayers, int _port, Dictionary<int, PacketHandler> _packetHandlers, string ipaddress = "any")
         {
+            packetHandlers = _packetHandlers;
             Start(_maxPlayers, _port, ipaddress);
         }
 

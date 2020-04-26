@@ -7,7 +7,6 @@ D:\MyData\VisualStudio Projects\VoorThomas\Wrapper\Wrapper\obj\Debug\Wrapper.dll
 D:\MyData\VisualStudio Projects\VoorThomas\Wrapper\Wrapper\obj\Debug\Wrapper.pdb
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\bin\Debug\Wrapper.dll
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\bin\Debug\Wrapper.pdb
-d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csprojAssemblyReference.cache
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.Strings.resources
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csproj.GenerateResource.cache
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csproj.CoreCompileInputs.cache
