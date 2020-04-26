@@ -27,6 +27,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -53,7 +54,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
@@ -64,7 +65,7 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
@@ -87,10 +88,29 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Compile Include="src\Hazel\Application.cs" />
+    <Compile Include="src\Hazel\Core.cs" />
+    <Compile Include="src\Hazel\Debug.cs" />
     <Compile Include="src\Hazel\EntryPoint.cs" />
+    <Compile Include="src\Hazel\events\ApplicationEvent.cs" />
+    <Compile Include="src\Hazel\events\Event.cs" />
+    <Compile Include="src\Hazel\events\KeyEvent.cs" />
+    <Compile Include="src\Hazel\events\MouseEvent.cs" />
+    <Compile Include="src\Hazel\Networking\Client\Client.cs" />
+    <Compile Include="src\Hazel\Networking\Packet.cs" />
+    <Compile Include="src\Hazel\Networking\ThreadManager.cs" />
+    <Compile Include="src\Hazel\OperatingSystem\Windows\WindowsWindow.cs" />
+    <Compile Include="src\Hazel\Window\Window.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Wrapper\Wrapper\Wrapper.csproj">
+      <Project>{e4bbe2c7-abe1-468b-9ed0-a5c2b908a7f9}</Project>
+      <Name>Wrapper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

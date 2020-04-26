@@ -1,0 +1,8 @@
+d:\visual studio\Hazel C-sharp\Hazel C-sharp\obj\x64\Debug\Hazel.csprojAssemblyReference.cache
+d:\visual studio\Hazel C-sharp\Hazel C-sharp\obj\x64\Debug\Hazel.csproj.CoreCompileInputs.cache
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\Hazel\Hazel C-sharp.dll.config
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\Hazel\Hazel C-sharp.dll
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\Hazel\Hazel C-sharp.pdb
+d:\visual studio\Hazel C-sharp\Hazel C-sharp\obj\x64\Debug\Hazel.csproj.CopyComplete
+d:\visual studio\Hazel C-sharp\Hazel C-sharp\obj\x64\Debug\Hazel C-sharp.dll
+d:\visual studio\Hazel C-sharp\Hazel C-sharp\obj\x64\Debug\Hazel C-sharp.pdb

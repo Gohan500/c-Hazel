@@ -1,0 +1,8 @@
+d:\visual studio\Hazel C-sharp\SandBox\obj\x64\Debug\SandBox.csprojAssemblyReference.cache
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\SandBox\SandBox.exe.config
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\SandBox\SandBox.exe
+d:\visual studio\Hazel C-sharp\bin\Debug-x64\SandBox\SandBox.pdb
+d:\visual studio\Hazel C-sharp\SandBox\obj\x64\Debug\SandBox.csproj.CopyComplete
+d:\visual studio\Hazel C-sharp\SandBox\obj\x64\Debug\SandBox.exe
+d:\visual studio\Hazel C-sharp\SandBox\obj\x64\Debug\SandBox.pdb
+D:\visual studio\Hazel C-sharp\SandBox\obj\x64\Debug\SandBox.csproj.CoreCompileInputs.cache
