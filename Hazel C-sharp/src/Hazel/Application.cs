@@ -39,7 +39,8 @@ namespace Hazel
 
         bool OnWindowClose(WindowCloseEvent e)
         {
-            Console.WriteLine("I did it " + e.ToString());
+            m_Running = false;
+            window.ShutDown();
             return true;
         }
 

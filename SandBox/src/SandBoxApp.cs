@@ -22,7 +22,6 @@ namespace SandBox
         public static void Main(string[] args)
         {
             new Application();
-            Console.Read();
         }
     }
 }

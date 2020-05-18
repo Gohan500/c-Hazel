@@ -146,7 +146,6 @@ namespace Hazel.OS.Windows
         public void ShutDown()
         {
             Glfw.DestroyWindow(m_Window);
-            handle.Free();
         }
 
         public void Terminate()

@@ -99,6 +99,8 @@
     <Compile Include="src\Hazel\events\KeyEvent.cs" />
     <Compile Include="src\Hazel\events\MouseEvent.cs" />
     <Compile Include="src\Hazel\IO\SaveSystem.cs" />
+    <Compile Include="src\Hazel\Layer.cs" />
+    <Compile Include="src\Hazel\LayerStack.cs" />
     <Compile Include="src\Hazel\Networking\Client\Client.cs" />
     <Compile Include="src\Hazel\Networking\Packet.cs" />
     <Compile Include="src\Hazel\Networking\Server\Client.cs" />
