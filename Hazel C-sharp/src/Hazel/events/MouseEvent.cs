@@ -8,6 +8,10 @@ namespace Hazel.Input
 {
     class MouseMovedEvent : Event
     {
+        public override EventType GetStaticType()
+        {
+            return EventType.MouseMoved;
+        }
         public MouseMovedEvent(float x, float y) : base(EventCategory.EventCategoryMouse, EventType.MouseMoved)
         {
             MouseX = x;
@@ -26,6 +30,10 @@ namespace Hazel.Input
 
     class MouseScrolledEvent : Event
     {
+        public override EventType GetStaticType()
+        {
+            return EventType.MouseScrolled;
+        }
         public MouseScrolledEvent(float yOffset, float xOffset) : base(EventCategory.EventCategoryMouse, EventType.MouseScrolled)
         {
             YOffset = yOffset;
@@ -49,10 +57,15 @@ namespace Hazel.Input
         }
 
         public int Button { get; private set; }
+
     }
 
     class MouseButtenPressedEvent : MouseButtonEvent
     {
+        public override EventType GetStaticType()
+        {
+            return EventType.MouseButtonPressed;
+        }
         public MouseButtenPressedEvent(int button) : base(button, EventType.MouseButtonPressed) { }
 
         public override string ToString()
@@ -60,10 +73,16 @@ namespace Hazel.Input
             return "MouseButtonPressedEvent: " + Button;
         }
 
+        
+
     }
 
     class MouseButtonReleasedEvent : MouseButtonEvent
     {
+        public override EventType GetStaticType()
+        {
+            return EventType.MouseButtonReleased;
+        }
         public MouseButtonReleasedEvent(int button) : base(button, EventType.MouseButtonReleased) { }
 
         public override string ToString()

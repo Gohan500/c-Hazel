@@ -58,6 +58,7 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <Prefer32Bit>true</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>..\bin\Debug-x64\Hazel\</OutputPath>
@@ -97,6 +98,7 @@
     <Compile Include="src\Hazel\events\Event.cs" />
     <Compile Include="src\Hazel\events\KeyEvent.cs" />
     <Compile Include="src\Hazel\events\MouseEvent.cs" />
+    <Compile Include="src\Hazel\IO\SaveSystem.cs" />
     <Compile Include="src\Hazel\Networking\Client\Client.cs" />
     <Compile Include="src\Hazel\Networking\Packet.cs" />
     <Compile Include="src\Hazel\Networking\Server\Client.cs" />

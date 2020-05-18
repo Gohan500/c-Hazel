@@ -8,6 +8,10 @@ namespace Hazel.Input
 {
     class WindowResizeEvent : Event
     {
+        public override EventType GetStaticType()
+        {
+            return EventType.WindowResize;
+        }
         public WindowResizeEvent(uint width, uint height) : base(EventCategory.EventCategoryApplication, EventType.WindowResize)
         {
             Width = width;
@@ -25,9 +29,15 @@ namespace Hazel.Input
 
     class WindowCloseEvent : Event
     {
-
+        public override EventType GetStaticType()
+        {
+            return EventType.WindowClose;
+        }
         public WindowCloseEvent() : base(EventCategory.EventCategoryApplication, EventType.WindowClose) { }
-
+        public override string ToString()
+        {
+            return "WindowCloseEvent";
+        }
 
     }
 

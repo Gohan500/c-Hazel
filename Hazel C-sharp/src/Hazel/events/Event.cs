@@ -29,7 +29,7 @@ namespace Hazel.Input {
 
     public class Event
     {
-        protected bool m_Handled = false;
+        public bool m_Handled = false;
 
         public Event(EventCategory category, EventType type)
         {
@@ -39,6 +39,11 @@ namespace Hazel.Input {
 
         }
 
+        public virtual EventType GetStaticType()
+        {
+            return EventType.None;
+        }
+
         public EventCategory eventCategory { get; private set; } = EventCategory.EventCategoryApplication;
         public EventType eventType { get; private set; }
         public string name { get { return eventType.ToString(); } }
@@ -46,13 +51,25 @@ namespace Hazel.Input {
         
     }
     
-        public delegate void Start();
-    public class EventHandle
+    class EventDispatcher
     {
-        public static Start[] starts; 
+        public delegate bool test<T>(T e) where T : Event;
+        
+        Event e;
+        public EventDispatcher(Event e)
+        {
+            this.e = e;
+        }
 
+        public bool Dispatch<T>(test<T> d) where T : Event
+        {
+            if(e is T)
+            {
+                e.m_Handled = d(e as T);
+                return true;
+            }
+            return false;
+        }
 
-
-
-    } 
+    }
 }

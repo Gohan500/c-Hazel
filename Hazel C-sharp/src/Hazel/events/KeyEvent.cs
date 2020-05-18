@@ -18,7 +18,10 @@ namespace Hazel.Input
     
     class KeyPressedEvent : KeyEvent
     {
-
+        public override EventType GetStaticType()
+        {
+            return EventType.KeyPressed;
+        }
         public KeyPressedEvent(int Keycode, int repeatCount) : base(Keycode, EventType.KeyPressed)
         {
             RepeatCount = repeatCount;
@@ -34,7 +37,10 @@ namespace Hazel.Input
 
     class KeyReleasedEvent : KeyEvent
     {
-
+        public override EventType GetStaticType()
+        {
+            return EventType.KeyPressed;
+        }
         public KeyReleasedEvent(int Keycode) : base(Keycode, EventType.KeyReleased) { }
 
         public override string ToString()

@@ -23,12 +23,13 @@ namespace Hazel.UI
 
     public delegate void Del(Event e);
 
-    interface IWindow
+    
+    public interface IWindow
     {
-
         void Onupdate();
         void SetEventCallback(Del d);
         void SetVSync(bool enabled);
 
     }
+    
 }

@@ -12,3 +12,4 @@ d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csproj.Generate
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csproj.CoreCompileInputs.cache
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.dll
 d:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.pdb
+D:\visual studio\Hazel C-sharp\Wrapper\Wrapper\obj\Debug\Wrapper.csprojAssemblyReference.cache

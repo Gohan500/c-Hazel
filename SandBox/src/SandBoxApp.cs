@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hazel.OS.Windows;
-using Hazel.UI;
+using Hazel;
 
 namespace SandBox
 {
@@ -14,18 +13,16 @@ namespace SandBox
         {
         }
 
-        public static void start()
+        public void Start()
         {
-
+            Debug.Log("yeet");
 
         }
 
         public static void Main(string[] args)
         {
-            WindowsWindow Ww = new WindowsWindow(new WindowProps(1280, 720));
-            Ww.Onupdate();
-            Ww.Terminate();
+            new Application();
+            Console.Read();
         }
-
     }
 }
