@@ -73,6 +73,7 @@
     <Compile Include="Exception.cs" />
     <Compile Include="FileDropEventArgs.cs" />
     <Compile Include="GameWindow.cs" />
+    <Compile Include="GLAD\Glad.cs" />
     <Compile Include="Glfw.cs" />
     <Compile Include="JetBrains.Annotations.cs" />
     <Compile Include="KeyEventArgs.cs" />

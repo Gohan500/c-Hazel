@@ -1,6 +1,7 @@
 ﻿using System;
 using Hazel.UI;
 using GLFW;
+using GLAD;
 using System.Runtime.InteropServices;
 using Hazel.Input;
 
@@ -45,6 +46,8 @@ namespace Hazel.OS.Windows
             
             m_Window = Glfw.CreateWindow((int)props.Width, (int)props.Height, props.Title, Monitor.None, Window.None);
             Glfw.MakeContextCurrent(m_Window);
+            int status = Glad.LoadGLLoader(Glfw.GetProcAddress);
+            Debug.DLog(status);
             SetVSync(true);
 
             #region // Set GLFW callbacks
