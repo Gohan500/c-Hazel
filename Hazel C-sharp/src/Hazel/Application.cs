@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using GLAD;
@@ -9,14 +10,18 @@ using Hazel.OS.Windows;
 
 namespace Hazel
 {
+
     public class Application 
     {
         private bool m_Running = false;
+        public static Application Instance = null;
 
         public Application()
         {
             window = new WindowsWindow(new UI.WindowProps(1280, 720));
             window.SetEventCallback(OnEvent);
+            if (Instance == null) return;
+            Instance = this;
         }
 
         public void PushLayer(Layer layer)
@@ -66,7 +71,7 @@ namespace Hazel
             return true;
         }
 
-        private WindowsWindow window;
+        public WindowsWindow window { get; private set; }
         private LayerStack m_LayerStack = new LayerStack();
     }
 }

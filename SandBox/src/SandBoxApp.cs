@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Hazel.ImGui;
 using Hazel.Input;
 using Hazel;
 
@@ -44,6 +40,7 @@ namespace SandBox
         {
             A = new Application();
             A.PushLayer(new exampleLayer());
+            A.pushOverlay(new ImGuiLayer());
             A.Run();
         }
     }

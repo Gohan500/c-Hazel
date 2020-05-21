@@ -11,7 +11,7 @@ namespace GLAD
     {
         public delegate IntPtr getprocaddress(string procName);
 
-        internal const string LIBRARY = "d:\\visual studio\\Hazel C-sharp\\x64\\Debug\\GLAD.dll";
+        internal const string LIBRARY = "d:\\visual studio\\Hazel C-sharp\\x64\\Debug\\GLAD\\GLAD.dll";
 
         [DllImport(LIBRARY, CallingConvention = CallingConvention.Cdecl, EntryPoint = "gladLoadGLLoader")]
         public static extern int LoadGLLoader(getprocaddress getprocaddress);

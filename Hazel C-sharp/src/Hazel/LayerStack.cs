@@ -20,11 +20,13 @@ namespace Hazel
             m_Layers.Insert(index, layer);
             index = m_Layers.IndexOf(layer);
             Debug.DLog(index);
+            layer.OnAttach();
         }
 
         public void PushOverlay(Layer layer)
         {
             m_Layers.Add(layer);
+            layer.OnAttach();
         }
 
         public void PopLayer(Layer layer)
