@@ -1,6 +1,6 @@
 ﻿using Hazel.Input;
-using ImGui;
 using GLFW;
+using ImGui;
 using System.Numerics;
 using Hazel.OS.Windows;
 using System.Runtime.CompilerServices;

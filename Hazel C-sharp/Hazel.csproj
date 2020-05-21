@@ -112,9 +112,9 @@
     <Compile Include="src\Hazel\Window\Window.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ImGui.NET-master\src\ImGui.NET\ImGui.NET.csproj">
-      <Project>{88252a6c-7a79-4584-a87a-1a164d898183}</Project>
-      <Name>ImGui.NET</Name>
+    <ProjectReference Include="..\ImGui.NET-master\src\ImGui.NET\ImGui.FrameWork\ImGui.FrameWork.csproj">
+      <Project>{ae5ccdc0-4728-4265-83f0-af052fe4aeb0}</Project>
+      <Name>ImGui.FrameWork</Name>
     </ProjectReference>
     <ProjectReference Include="..\Wrapper\Wrapper\Wrapper.csproj">
       <Project>{e4bbe2c7-abe1-468b-9ed0-a5c2b908a7f9}</Project>
