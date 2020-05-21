@@ -43,7 +43,7 @@ namespace Hazel.Networking.Server
             MaxPlayers = _maxPlayers;
             Port = _port;
 
-            Debug.Log("Starting server...");
+            Debug.DLog("Starting server...");
             InitializeServerData();
 
             if (ipaddress == "any")
@@ -60,7 +60,7 @@ namespace Hazel.Networking.Server
             udpListener = new UdpClient(Port);
             udpListener.BeginReceive(UDPReceiveCallback, null);
 
-            Debug.Log($"Server started on port {Port}.");
+            Debug.DLog($"Server started on port {Port}.");
         }
 
         /// <summary> 
@@ -73,7 +73,7 @@ namespace Hazel.Networking.Server
         {
             TcpClient _client = tcpListener.EndAcceptTcpClient(_result);
             tcpListener.BeginAcceptTcpClient(TCPConnectCallback, null);
-            Debug.Log($"Incoming connection from {_client.Client.RemoteEndPoint}...");
+            Debug.DLog($"Incoming connection from {_client.Client.RemoteEndPoint}...");
 
             for (int i = 1; i <= MaxPlayers; i++)
             {
@@ -84,7 +84,7 @@ namespace Hazel.Networking.Server
                 }
             }
 
-            Debug.LogError($"{_client.Client.RemoteEndPoint} failed to connect: Server full!");
+            Debug.DLogError($"{_client.Client.RemoteEndPoint} failed to connect: Server full!");
         }
 
         /// <summary>
@@ -127,7 +127,7 @@ namespace Hazel.Networking.Server
             }
             catch (Exception _ex)
             {
-                Debug.LogError($"Error receiving UDP data: {_ex}");
+                Debug.DLogError($"Error receiving UDP data: {_ex}");
             }
         }
 
@@ -147,7 +147,7 @@ namespace Hazel.Networking.Server
             }
             catch (Exception _ex)
             {
-                Debug.LogError($"Error sending data to {_clientEndPoint} via UDP: {_ex}");
+                Debug.DLogError($"Error sending data to {_clientEndPoint} via UDP: {_ex}");
             }
         }
 
@@ -163,7 +163,7 @@ namespace Hazel.Networking.Server
                 clients.Add(i, new Client(i,this));
             }
 
-            Debug.Log("Initialized packets.");
+            Debug.DLog("Initialized packets.");
         }
 
         public void SendTCPData(int _toClient, Packet _packet)

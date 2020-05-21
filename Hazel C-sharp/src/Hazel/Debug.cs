@@ -10,6 +10,25 @@ namespace Hazel
     public class Debug
     {
 
+        internal static void DLog(object log)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("DLog " + DateTime.Now + " " + log);
+        }
+
+        internal static void DLogWarning(object log)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("DLog " + DateTime.Now + " " + log);
+        }
+
+        internal static void DLogError(object log)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("DLog " + DateTime.Now + " " + log);
+            throw new Exception(log.ToString());
+        }
+
         public static void Log(object log)
         {
             Console.ForegroundColor = ConsoleColor.White;

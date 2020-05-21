@@ -39,7 +39,7 @@ namespace Hazel.Networking.Client
                 instance = this;
             else
             {
-                Debug.LogError("Instance already exists you can't create a second one!");
+                Debug.DLogError("Instance already exists you can't create a second one!");
                 return;
             }
 
@@ -79,7 +79,7 @@ namespace Hazel.Networking.Client
             private void ConnectCallback(IAsyncResult _result)
             {
                 socket.EndConnect(_result);
-                Debug.Log(_result);
+                Debug.DLog(_result);
 
 
 
@@ -106,7 +106,7 @@ namespace Hazel.Networking.Client
                 }
                 catch (Exception _ex)
                 {
-                    Debug.Log($"Error sending data to server via TCP: {_ex}");
+                    Debug.DLog($"Error sending data to server via TCP: {_ex}");
                 }
             }
 
@@ -225,7 +225,7 @@ namespace Hazel.Networking.Client
                 }
                 catch (Exception _ex)
                 {
-                    Debug.Log($"Error sending data to server via UDP: {_ex}");
+                    Debug.DLog($"Error sending data to server via UDP: {_ex}");
                 }
             }
 
@@ -285,7 +285,7 @@ namespace Hazel.Networking.Client
                 tcp.socket.Close();
                 udp.socket.Close();
 
-                Debug.Log("Disconnected from server.");
+                Debug.DLog("Disconnected from server.");
             }
         }
     }

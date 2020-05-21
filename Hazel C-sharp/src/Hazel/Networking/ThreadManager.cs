@@ -23,7 +23,7 @@ namespace Hazel.Networking
         {
             if (_action == null)
             {
-                Debug.Log("No action to execute on main thread!");
+                Debug.DLog("No action to execute on main thread!");
                 return;
             }
 

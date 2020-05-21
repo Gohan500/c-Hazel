@@ -17,7 +17,16 @@ namespace Hazel
         {
             window = new WindowsWindow(new UI.WindowProps(1280, 720));
             window.SetEventCallback(OnEvent);
-            Run();
+        }
+
+        public void PushLayer(Layer layer)
+        {
+            m_LayerStack.PushLayer(layer);
+        }
+
+        public void pushOverlay(Layer layer)
+        {
+            m_LayerStack.PushOverlay(layer);
         }
 
         public void Run()
@@ -25,8 +34,11 @@ namespace Hazel
             m_Running = true;
             while (m_Running)
             {
+                foreach (Layer L in m_LayerStack.m_Layers)
+                {
+                    L.OnUpdate();
+                }
                 window.Onupdate();
-
             }
             
         }
@@ -35,6 +47,16 @@ namespace Hazel
         {
             EventDispatcher ed = new EventDispatcher(e);
             ed.Dispatch<WindowCloseEvent>(OnWindowClose);
+
+            Debug.DLog(e);
+
+            foreach(Layer L in m_LayerStack.m_Layers)
+            {
+                L.OnEvent(e);
+                if (e.m_Handled)
+                    break;
+            }
+
         }
 
         bool OnWindowClose(WindowCloseEvent e)
@@ -45,5 +67,6 @@ namespace Hazel
         }
 
         private WindowsWindow window;
+        private LayerStack m_LayerStack = new LayerStack();
     }
 }

@@ -62,7 +62,7 @@ namespace Hazel.Networking.Server
                 }
                 catch (Exception _ex)
                 {
-                    Debug.LogError($"Error sending data to player {id} via TCP: {_ex}");
+                    Debug.DLogError($"Error sending data to player {id} via TCP: {_ex}");
                 }
             }
 
@@ -85,7 +85,7 @@ namespace Hazel.Networking.Server
                 }
                 catch (Exception _ex)
                 {
-                    Debug.LogError($"Error receiving TCP data: {_ex}");
+                    Debug.DLogError($"Error receiving TCP data: {_ex}");
                     Server.clients[id].Disconnect();
                 }
             }
@@ -191,7 +191,7 @@ namespace Hazel.Networking.Server
 
         private void Disconnect()
         {
-            Debug.Log($"{tcp.socket.Client.RemoteEndPoint} has disconnected.");
+            Debug.DLog($"{tcp.socket.Client.RemoteEndPoint} has disconnected.");
             //StreamWriter sw = new StreamWriter(ServerHandle.path, true);
             //sw.WriteLine($"{tcp.socket.Client.RemoteEndPoint} has disconnected at {DateTime.Now}");
             //sw.Close();

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hazel
 {
-    class Layer
+    public class Layer
     {
 
         public string m_DebugName{ get; protected set; }

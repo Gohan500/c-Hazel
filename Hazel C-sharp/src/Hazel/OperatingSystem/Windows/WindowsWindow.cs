@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Hazel.UI;
-using GLFW.Game;
 using GLFW;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Hazel.Input;
 
@@ -18,7 +12,8 @@ namespace Hazel.OS.Windows
         
         static void GLFWErrorCallback(ErrorCode code, IntPtr message)
         {
-            Debug.LogError("GLFW Error: "+code +" "+ message);
+            Debug.DLogError("GLFW Error: "+code +" "+ message);
+            
         }
 
         public WindowsWindow(WindowProps props)
@@ -32,7 +27,7 @@ namespace Hazel.OS.Windows
             m_Data.Width = props.Width;
             m_Data.Height = props.Height;
 
-            Debug.Log($"Creating Window {props.Title} ({props.Width}, {props.Height})");
+            Debug.DLog($"Creating Window {props.Title} ({props.Width}, {props.Height})");
 
             if (!s_GLFWInitialized)
             {
@@ -40,7 +35,7 @@ namespace Hazel.OS.Windows
 
                 if (!succes)
                 {
-                    Debug.LogError("Could not initailize GLFW!");
+                    Debug.DLogError("Could not initailize GLFW!");
                     return;
                 }
                 Glfw.SetErrorCallback(GLFWErrorCallback);
@@ -183,7 +178,7 @@ namespace Hazel.OS.Windows
             public uint Height { get; internal set; }
             public bool VSync { get; internal set; }
 
-            public Del d { get { return _d; } set { Debug.Log(value); _d = value; } }
+            public Del d { get { return _d; } set { Debug.DLog(value); _d = value; } }
             public Del _d;
 
             public static readonly WindowData None;
