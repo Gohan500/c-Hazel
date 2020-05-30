@@ -46,7 +46,7 @@ namespace Hazel.OS.Windows
             
             m_Window = Glfw.CreateWindow((int)props.Width, (int)props.Height, props.Title, Monitor.None, Window.None);
             Glfw.MakeContextCurrent(m_Window);
-            int status = Glad.LoadGLLoader(Glfw.GetProcAddress);
+            int status = Glad.LoadGLLoader(_GetProcAddress);
             Debug.DLog(status);
             SetVSync(true);
 
@@ -141,6 +141,14 @@ namespace Hazel.OS.Windows
 
         }
 
+        public static IntPtr _GetProcAddress(string procName)
+        {
+            Debug.DLog("GLFW: " + procName);
+            IntPtr intPtr = Glfw.GetProcAddress(procName);
+            Debug.DLog(intPtr.ToString());
+            return intPtr;
+        }
+
         public void ShutDown()
         {
             Glfw.DestroyWindow(m_Window);
@@ -191,7 +199,5 @@ namespace Hazel.OS.Windows
         public Window m_Window { get; private set; }
         private bool s_GLFWInitialized = false;
         public static WindowData m_Data;
-        private GCHandle handle;
-        private GCHandle handle2;
         }
 }

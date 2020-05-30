@@ -4,6 +4,8 @@ using ImGui;
 using System.Numerics;
 using Hazel.OS.Windows;
 using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System.Runtime.ExceptionServices;
 
 namespace Hazel.ImGui
 {
@@ -14,6 +16,8 @@ namespace Hazel.ImGui
             : base("ImGuiLayer")
         {
         }
+
+        [HandleProcessCorruptedStateExceptions]
         public override void OnAttach()
         {
             Imgui.CreateContext();
@@ -46,7 +50,20 @@ namespace Hazel.ImGui
             io.KeyMap[(int)ImGuiKey.Y] = (int)Keys.Y;
             io.KeyMap[(int)ImGuiKey.Z] = (int)Keys.Z;
 
-            ImGuiNative.ImGui_ImplOpenGL3_Init("#version 410");
+            try
+            {
+                ImGuiNative.ImGui_ImplOpenGL3_Init("#version 410");
+
+            }
+            catch (System.Exception ex)
+            {
+                foreach (var item in ex.Data)
+                {
+                    Debug.DLogWarning(item.ToString());
+                }
+                
+            }
+
         }
 
         public override void OnDetach()

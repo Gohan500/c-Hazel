@@ -1647,6 +1647,8 @@ namespace GLFW
             return Util.PtrToStringUTF8(GetMonitorNameInternal(monitor));
         }
 
+        
+
         /// <summary>
         ///     Gets the address of the specified OpenGL or OpenGL ES core or extension function, if it is
         ///     supported by the current context.
